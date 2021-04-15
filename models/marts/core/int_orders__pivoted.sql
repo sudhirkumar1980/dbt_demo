@@ -11,7 +11,7 @@ final as (
 
        sum(case when payment_method = '{{ payment_method }}' then amount else 0 end) as {{ payment_method }}_amount
 
-       {%- if not loop.last -%}
+       {%- if not loop.last  -%}
          ,
        {% endif -%}
 
